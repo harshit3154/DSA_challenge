@@ -20,7 +20,7 @@ int main()
     {
         cout<<"\n\n\t\tEnter the element to be searched in the array : ";
         cin>>key;
-        
+        binary_search(p,n,key);
     }
     return 0;
 }
