@@ -27,24 +27,22 @@ int main()
 
 void binary_search(int* p,int n,int key)
 {
-    int l=0,h=n-1,flag=-1;
-    while(l<=h)
+    int l=0,h=n-1;
+    while(l<h)
     {
         int mid=l+(h-l)/2;
         if(p[mid]==key)
         {
             cout<<"\n\n\tThe element is present in the element at "<<mid+1<<" location and "<<mid<<" index.";
-            flag=1;
-            break;
+            return;
         }
-        else if(p[mid]>key)
+        else if(key<p[mid])
         {
-            l=mid+1;
-        }
-        else{
             h=mid-1;
         }
+        else{
+            l=mid+1;
+        }
     }
-     if(flag==-1)
-        cout<<"\n\n\tThe element is not present in the elment :";
+    cout<<"\n\n\tThe element is not present in the elment :";
 }
